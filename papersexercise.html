@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="paper-full.js"></script>
+	<link rel="stylesheet" type="text/css" href="papersexercise.css">
+
+	<title>Paper Js Exercise</title>
+
+	<script type="text/paperscript" canvas="myCanvas">
+
+		var xAxis = 0;
+		var yAxis = 0;
+
+		for(var i = 0; i < 10; i++){
+			for(var j = 0; j < 10; j++){
+				new Path.Circle(new Point(xAxis, yAxis), 10).fillColor = 'purple';
+				xAxis = xAxis + 100;
+			}
+			yAxis = yAxis + 100;
+			xAxis = 0;
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<canvas id="myCanvas" resize></canvas>
+
+</body>
+</html>
